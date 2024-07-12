@@ -10,6 +10,15 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --green: #088178;
+  --light-green: #e8f6ea;
+  --shade-green: #cce7d0;
+  --yellow: rgb(241, 181, 25);
+  --white: #fff;
+  --red: #ef3636;
+}
+
 /* Global Styles */
 
 h1 {
@@ -46,6 +55,19 @@ p {
 
 .section-m1 {
   margin: 40px 0;
+}
+
+button.normal {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: #000;
+  background-color: var(--white);
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  transition: 0.2s;
 }
 
 body {
@@ -91,7 +113,7 @@ body {
 
 #navbar li a:hover,
 #navbar li a.active {
-  color: #088178;
+  color: var(--green);
 }
 
 #navbar li a.active::after,
@@ -99,7 +121,7 @@ body {
   content: "";
   width: 30%;
   height: 2px;
-  background-color: #088178;
+  background-color: var(--green);
   position: absolute;
   bottom: -4px;
   left: 20px;
@@ -124,13 +146,13 @@ body {
 }
 
 #hero h1 {
-  color: #088178;
+  color: var(--green);
 }
 
 #hero button {
   background-image: url("img/button.png");
   background-color: transparent;
-  color: #088178;
+  color: var(--green);
   border: 0;
   padding: 14px 80px 14px 65px;
   background-repeat: no-repeat;
@@ -170,7 +192,7 @@ body {
   padding: 8px 8px 6px 8px;
   line-height: 1;
   border-radius: 4px;
-  color: #088178;
+  color: var(--green);
   background-color: #fddde4;
 }
 
@@ -201,9 +223,9 @@ body {
 #product1 .pro-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 1rem;
   padding: 20px;
-  /* align-items: center; */
 }
 
 #product1 .pro {
@@ -246,14 +268,14 @@ body {
 
 #product1 .pro .des i {
   font-size: 12px;
-  color: rgb(241, 181, 25);
+  color: var(--yellow);
 }
 
 #product1 .pro .des h4 {
   padding-top: 7px;
   font-size: 15px;
   font-weight: 700;
-  color: #088178;
+  color: var(--green);
 }
 
 #product1 .pro .cart {
@@ -261,11 +283,43 @@ body {
   height: 40px;
   line-height: 40px;
   border-radius: 50px;
-  background-color: #e8f6ea;
+  background-color: var(--light-green);
   /* font-weight: 500; */
-  color: #088178;
-  border: 1px solid #cce7d0;
+  color: var(--green);
+  border: 1px solid --shade-green;
   position: absolute;
   bottom: 20px;
   right: 10px;
+}
+
+#banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("img/banner/b2.jpg");
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+}
+
+#banner h4 {
+  color: var(--white);
+  font-size: 15px;
+}
+
+#banner h2 {
+  color: var(--white);
+  font-size: 30px;
+  padding: 10px 0;
+}
+
+#banner h2 span {
+  color: var(--red);
+}
+
+#banner button:hover {
+  background-color: var(--green);
+  color: var(--white);
 }
