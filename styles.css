@@ -94,7 +94,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 10px; */
+  padding-right: 30px;
   /* background-color: #e3e6f3; */
   background-color: #fff;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -140,18 +140,31 @@ body {
   left: 20px;
 }
 
+#close {
+  display: none;
+}
+
+#mobile {
+  display: none;
+  align-items: center;
+}
+
 /* HOME PAGE */
-#hero {
-  background-image: url("WEB-BANNER-FASHION-8.webp");
-  height: 90vh;
+#hero img {
+  /* background-image: url("WEB-BANNER-FASHION-8.webp"); */
+  /* height: 90vh; */
+  /* display: block; */
+  height: 100%;
   width: 100%;
-  background-position: top 25% right 0;
-  background-size: cover;
-  padding: 0 80px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
+  /* background-position: center; */
+  /* background-size: cover; */
+  /* padding: 0 80px; */
+  /* margin: auto; */
+  /* display: flex; */
+  /* align-items: flex-start; */
+  /* justify-content: center; */
+  /* flex-direction: column; */
+  transition: background-size 0.5s ease-in-out;
 }
 
 #hero h4 {
@@ -236,7 +249,7 @@ body {
 #product1 .pro-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   gap: 1rem;
   padding: 20px;
 }
@@ -361,24 +374,6 @@ body {
   background-image: url("img/banner/b10.jpg");
 }
 
-@media screen and (min-width: 600px) {
-  #sm-banner .banner-box {
-    width: 500px;
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  #sm-banner .banner-box {
-    width: 720px;
-  }
-}
-
-@media screen and (min-width: 1890px) {
-  #sm-banner .banner-box {
-    width: 850px;
-  }
-}
-
 #sm-banner h4 {
   color: var(--white);
   font-size: 20px;
@@ -408,6 +403,7 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 0 80px;
+  color: var(--white);
   /* gap: 40px; */
 }
 
@@ -416,8 +412,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-image: url("img/banner/b7.jpg");
-  width: 30%;
+  background-image: url("banner3-3.avif");
+  min-width: 30%;
   height: 30vh;
   background-size: cover;
   background-position: center;
@@ -426,14 +422,14 @@ body {
 }
 
 #banner3 .banner-box2 {
-  background-image: url("img/banner/b4.jpg");
+  background-image: url("banner3-1.webp");
 }
 
 #banner3 .banner-box3 {
-  background-image: url("img/banner/b18.jpg");
+  background-image: url("banner3-2.jpg");
 }
 
-#banner3 h2 {
+#banner3 h4 {
   color: var(--white);
   font-weight: 900;
   font-size: 22px;
@@ -478,7 +474,7 @@ body {
 }
 
 #newsletter input {
-  height: 3.125rem;
+  height: 3rem;
   padding: 0 1.25em;
   font-size: 14px;
   width: 100%;
@@ -512,8 +508,10 @@ footer .col {
 }
 
 footer .logo {
-  /* margin-top: 0px; */
-  margin-bottom: 15px;
+  /* border: 1px solid black; */
+  margin-top: 0px;
+  /* margin-bottom: 15px; */
+  height: 4rem;
 }
 
 footer h4 {
@@ -554,6 +552,114 @@ footer .install img {
   margin: 10px 0 15px 0;
 }
 
-footer .footer i:hover {
+footer .footer i:hover,
+footer a:hover {
+  color: var(--green);
+}
 
+footer .copyright {
+  width: 100%;
+  text-align: center;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 799px) {
+
+  .section-p1 {
+    padding: 40px 40px;
+}
+
+  #header {
+    height: 6rem;
+  }
+
+  #header .logo {
+    width: 4rem;
+    /* padding: 80px; */
+    /* height: 2rem; */
+  }
+
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -400px;
+    height: 100vh;
+    width: 350px;
+    background-color: #e3e6f3;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0);
+    padding: 80px 0 0 10px;
+    transition: 0.3s;
+  }
+
+  #navbar.active {
+    right: 0px;
+  }
+
+  #navbar li {
+    margin-bottom: 25px;
+  }
+
+  #mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  #mobile i {
+    padding-left: 20px;
+    font-size: 20px;
+    color: #1a1a1a;
+  }
+  
+  #close {
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 24px;
+    color: #222;
+  }
+
+  #lg-bag {
+    display: none;
+  }
+
+  #feature {
+    justify-content: center;
+  }
+
+  #feature .fe-box {
+    margin: 15px;
+  }
+
+  #product1 .pro-container {
+    justify-content: center;
+  }
+
+  #product1 .pro {
+    margin: 15px;
+  }
+
+  #banner {
+    height: 20vh;
+  }
+
+  #sm-banner .banner-box {
+    min-width: 100%;
+    height: 30vh;
+  }
+
+  #banner3 {
+    padding: 0 40px;
+  } 
+  #banner3 .banner-box {
+    width: 28%;
+  }
+
+  #newsletter .form {
+    width: 70%;
+  }
 }
