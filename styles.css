@@ -187,7 +187,7 @@ body {
   font-size: 15px;
 }
 
-#feature {
+/* #feature {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -240,7 +240,7 @@ body {
 
 #feature .fe-box:nth-child(6) h6 {
   background-color: #fff2e5;
-}
+} */
 
 #product1 {
   text-align: center;
@@ -256,29 +256,33 @@ body {
 
 #product1 .pro {
   width: 23%;
-  min-width: 250px;
-  padding: 10px 12px;
+  min-width: 300px;
+  /* height: 500px; */
+  /* padding: 10px 12px; */
   border: 1px solid #cce7d0;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   cursor: pointer;
-  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  /* box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02); */
   transition: 0.2s ease;
   position: relative;
 
 }
 
 #product1 .pro:hover {
-  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+  /* box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06); */
+  transform: scale(1.05)
 }
 
 #product1 .pro img {
   width: 100%;
-  border-radius: 20px;
+  /* height: 450px; */
+  /* border-radius: 20px; */
 }
 
 #product1 .pro .des {
   text-align: start;
-  padding: 10px 0;
+  padding: 10px 10px;
+  text-transform: uppercase;
 }
 
 #product1 .pro span {
@@ -289,7 +293,7 @@ body {
 #product1 .pro .des h5 {
   padding-top: 7px;
   color: #1a1a1a;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 #product1 .pro .des i {
@@ -661,6 +665,10 @@ footer .copyright {
 }
 
 /* CART PAGE */
+#cart {
+  overflow-x: auto;
+}
+
 #cart table {
   width: 100%;
   border-collapse: collapse;
@@ -731,14 +739,45 @@ footer .copyright {
   margin-bottom: 30px;
 }
 
-#coupon h3 {
+#coupon h3,
+#subtotal h3 {
   padding-bottom: 15px;
 }
 
 #coupon input {
   padding: 10px 20px;
+  outline: none;
+  width: 60%;
+  margin-right: 10px;
+  border: 1px solid #e2e9e1;
 }
 
+#coupon button,
+#subtotal button {
+  background-color: var(--green);
+  color: var(--white);
+  padding: 12px 20px;
+}
+
+#subtotal {
+  width: 40%;
+  margin: 30px;
+  padding: 30px;
+  border: 11px solid #e2e9e1;
+}
+
+#subtotal table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#subtotal table td {
+  width: 50%;
+  border: 1px solid #e2e9e1;
+  padding: 10px;
+  font-size: 13px;
+}
 
 /* MEDIA QUERY */
 
@@ -940,6 +979,21 @@ footer .copyright {
 
   #prodetails .single-pro-details {
     width: 100%;
+  }
+
+  /* Cart page */
+  #cart-add {
+    flex-direction: column;
+  }
+
+  #coupon {
+    width: 100%;
+  }
+
+  #subtotal {
+    width: 100%;
+    padding: 20px;
+    margin: 5px;
   }
 }
 
